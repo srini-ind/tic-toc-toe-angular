@@ -1,6 +1,6 @@
 {
-  "name": "stackblitz-starters-1xcgcg",
-  "version": "0.0.0",
+  "name": "tic-toc-toe-amgular",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "rxjs": "7.8.1",
