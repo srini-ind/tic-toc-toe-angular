@@ -1,0 +1,24 @@
+@if(winner) {
+<h2>Winner: {{ winner }} 🥳</h2>
+} @else { @if(!boardisEmpty) {
+<h2>Match Tied</h2>
+} @else{
+<h2>Next Player: {{ nextPlayer }}</h2>
+} }
+<div class="boardContainer">
+  @for (tile of board; let i = $index; track i) {
+  <div class="squareStyle">
+    <button
+      (click)="nextMove(i)"
+      [style.color]="tile === 'X' ? '#d4142a' : '#06b66c'"
+    >
+      {{ tile }}
+    </button>
+  </div>
+  }
+</div>
+@if(winner || !boardisEmpty) {
+<button class="start-button" role="button" (click)="restartGame()">
+  Start Game
+</button>
+}
